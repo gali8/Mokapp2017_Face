@@ -23,7 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		646FD7F01FC748220026178C /* Mokapp2017Face.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mokapp2017Face.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		646FD7F01FC748220026178C /* Mokapp Face.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mokapp Face.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		646FD7F31FC748220026178C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		646FD7F81FC748220026178C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		646FD7FA1FC748220026178C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,7 +62,7 @@
 		646FD7F11FC748220026178C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				646FD7F01FC748220026178C /* Mokapp2017Face.app */,
+				646FD7F01FC748220026178C /* Mokapp Face.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -113,7 +113,7 @@
 			);
 			name = Mokapp2017Face;
 			productName = Mokapp2017Face;
-			productReference = 646FD7F01FC748220026178C /* Mokapp2017Face.app */;
+			productReference = 646FD7F01FC748220026178C /* Mokapp Face.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -315,11 +315,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 44R9293238;
+				DEVELOPMENT_TEAM = B629US47XJ;
 				INFOPLIST_FILE = Mokapp2017Face/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = it.nexor.Mokapp2017Face;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = it.nexor.MokappFace;
+				PRODUCT_NAME = "Mokapp Face";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -330,11 +330,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 44R9293238;
+				DEVELOPMENT_TEAM = B629US47XJ;
 				INFOPLIST_FILE = Mokapp2017Face/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = it.nexor.Mokapp2017Face;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = it.nexor.MokappFace;
+				PRODUCT_NAME = "Mokapp Face";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
