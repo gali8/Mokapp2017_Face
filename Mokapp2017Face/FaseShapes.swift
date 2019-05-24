@@ -123,8 +123,8 @@ class BlendShapeNode: SCNReferenceNode, VirtualSCNReferenceNode {
             
             if tongueOut > 0.3 {
                 if tongue.scale.y < 3 {
-                    tongue.position.y += tongueOut / 100
-                    tongue.scale.y += tongueOut
+                    tongue.position.y -= tongueOut / 100
+                    tongue.scale.y -= tongueOut
                 }
             }
             else {
