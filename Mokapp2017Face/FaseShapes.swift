@@ -25,6 +25,8 @@ class BlendShapeNode: SCNReferenceNode, VirtualSCNReferenceNode {
     private lazy var eyeRightPupil = childNode(withName: "eyeRightPupil", recursively: true)!
     lazy var mouth = childNode(withName: "mouth", recursively: true)!
     private lazy var nose = childNode(withName: "nose", recursively: true)!
+    private lazy var tongue = childNode(withName: "tongue", recursively: true)!
+    private lazy var tongueAnimating: Bool = false
     
     private var originalLeftEarringPosition: Float = 0
     private var originalEyebrowLeftPosition: Float = 0
@@ -36,6 +38,8 @@ class BlendShapeNode: SCNReferenceNode, VirtualSCNReferenceNode {
     private var originalMouthPosition: Float = 0
     
     private var originalNosePosition: Float = 0
+    
+    private var originalTonguePosition: Float = 0
     
     init() {
         guard let url = Bundle.main.url(forResource: "accessory", withExtension: "scn", subdirectory: "blendShape.scnassets")
@@ -49,6 +53,7 @@ class BlendShapeNode: SCNReferenceNode, VirtualSCNReferenceNode {
         originalEyeRightPupilPosition = eyeRightPupil.position.x
         originalMouthPosition = mouth.position.y
         originalNosePosition = nose.position.x
+        originalTonguePosition = tongue.position.y
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -71,7 +76,8 @@ class BlendShapeNode: SCNReferenceNode, VirtualSCNReferenceNode {
                 let mouthSmileLeft = blendShapes[.mouthSmileLeft] as? Float,
                 let mouthSmileRight = blendShapes[.mouthSmileRight] as? Float,
                 let noseSneerLeft = blendShapes[.noseSneerLeft] as? Float,
-                let noseSneerRight = blendShapes[.noseSneerRight] as? Float
+                let noseSneerRight = blendShapes[.noseSneerRight] as? Float,
+                let tongueOut = blendShapes[.tongueOut] as? Float
                 else { return }
             //leftEarring.scale.z = 1 - eyeBlinkLeft
             
@@ -104,15 +110,38 @@ class BlendShapeNode: SCNReferenceNode, VirtualSCNReferenceNode {
             
             mouth.scale.x = 0.7 - mouthClose + (max(mouthSmileLeft, mouthSmileRight)/2)
             
-            let noseWidth = nose.boundingBox.max.x - nose.boundingBox.min.x
-            if max(noseSneerLeft, noseSneerRight) > 0.3 {
-                if noseSneerLeft > noseSneerRight {
-                    nose.position.x = originalNosePosition - (noseWidth * noseSneerLeft)
-                }
-                else {
-                    nose.position.x = originalNosePosition + (noseWidth * noseSneerRight)
+//            let noseWidth = nose.boundingBox.max.x - nose.boundingBox.min.x
+//            if max(noseSneerLeft, noseSneerRight) > 0.3 {
+//                if noseSneerLeft > noseSneerRight {
+//                    nose.position.x = originalNosePosition - (noseWidth * noseSneerLeft)
+//                }
+//                else {
+//                    nose.position.x = originalNosePosition + (noseWidth * noseSneerRight)
+//                }
+//            }
+            
+            
+            if tongueOut > 0.3 {
+                if tongue.scale.y < 3 {
+                    tongue.position.y += tongueOut / 100
+                    tongue.scale.y += tongueOut
                 }
             }
+            else {
+                tongue.position.y = originalTonguePosition
+                tongue.scale.y = 1
+            }
+            
+            
+//            if tongueOut > 0.5, self.tongueAnimating == false {
+//
+//                self.tongueAnimating = true
+//
+//                let action = SCNAction.rotateBy(x: 0, y: 0, z: .pi, duration: 0.3)
+//                tongue.runAction(action, completionHandler: {
+//                    self.tongueAnimating = false
+//                })
+//            }
             
             //jawNode.position.y = originalJawY - jawHeight * jawOpen
         }

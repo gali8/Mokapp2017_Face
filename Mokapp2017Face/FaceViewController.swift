@@ -13,6 +13,7 @@ import ARKit
 
 enum FaceDemoType {
     case start
+    case line
     case mask
     case blendShapes
     case particle
@@ -43,12 +44,19 @@ class FaceViewController: UIViewController {
                 material?.diffuse.contents = UIColor.green //spumeggiante!
                 material?.lightingModel = .physicallyBased
                 return faceGeometry
+            case .line:
+                let faceGeometry = ARSCNFaceGeometry(device: self.scnView.device!)
+                let material = faceGeometry?.firstMaterial
+                material?.diffuse.contents = UIColor.white //lines!
+                material?.lightingModel = .physicallyBased
+                material?.fillMode = .lines
+                return faceGeometry
             case .blendShapes,
             .particle,
             .all:
                 let faceGeometry = ARSCNFaceGeometry(device: self.scnView.device!)
                 let material = faceGeometry?.firstMaterial
-                material?.diffuse.contents = UIColor.clear //spumeggiante!
+                material?.diffuse.contents = UIColor.clear
                 return faceGeometry
             default:
                 return nil
@@ -59,7 +67,7 @@ class FaceViewController: UIViewController {
     var faceDemoTypeNode: SCNNode? {
         get {
             switch faceDemoType {
-            case .mask:
+            case .mask, .line:
                 self.virtualReferenceNode = nil
                 return nil
             case .blendShapes,
@@ -146,6 +154,9 @@ class FaceViewController: UIViewController {
         }
     }
 
+    @IBAction func onLine(_ sender: Any) {
+        faceDemoType = .line
+    }
     @IBAction func onMask(_ sender: Any) {
         faceDemoType = .mask
     }
@@ -168,7 +179,7 @@ class FaceViewController: UIViewController {
         switch faceDemoType {
         case .start:
             break
-        case .mask:
+        case .mask, .line:
             self.faceNode?.geometry = faceDemoTypeGeometry
             break
         case .blendShapes:
@@ -224,7 +235,8 @@ class FaceViewController: UIViewController {
         switch faceDemoType {
         case
         .start,
-        .mask:
+        .mask,
+        .line:
             break
         case .blendShapes:
             virtualReferenceNode?.update(withFaceAnchor: anchor)

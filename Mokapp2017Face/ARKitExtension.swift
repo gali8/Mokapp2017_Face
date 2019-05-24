@@ -37,6 +37,7 @@ extension FaceViewController: ARSCNViewDelegate {
         let configuration = ARFaceTrackingConfiguration()
         configuration.isLightEstimationEnabled = true
         self.scnView.antialiasingMode = .multisampling4X
+        self.scnView.session.pause()
         self.scnView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
     }
     
@@ -64,6 +65,25 @@ extension FaceViewController: ARSCNViewDelegate {
     }
     
     //MARK: - ARSCNViewDelegate
+//    func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
+//        guard let device = self.scnView.device else {
+//            return nil
+//        }
+//        
+//        switch faceDemoType {
+//        case .line:
+//            let faceGeometry = ARSCNFaceGeometry(device: device)
+//            let node = SCNNode(geometry: faceGeometry)
+//            node.geometry?.firstMaterial?.fillMode = .lines
+//            return node
+//        default:
+//            let faceGeometry = ARSCNFaceGeometry(device: device)
+//            let node = SCNNode(geometry: faceGeometry)
+//            node.geometry?.firstMaterial?.diffuse.contents = UIColor.clear
+//            return node
+//        }
+//    }
+    
     public func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         DispatchQueue.main.async {
             switch anchor {
