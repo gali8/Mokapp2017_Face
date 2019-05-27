@@ -20,8 +20,10 @@
 		646FD81C1FC776910026178C /* FaseShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646FD81B1FC776910026178C /* FaseShapes.swift */; };
 		64DC24C42298AF1600613E7A /* eyel.png in Resources */ = {isa = PBXBuildFile; fileRef = 64DC24C22298AF1600613E7A /* eyel.png */; };
 		64DC24C52298AF1600613E7A /* eyer.png in Resources */ = {isa = PBXBuildFile; fileRef = 64DC24C32298AF1600613E7A /* eyer.png */; };
-		64DC24CB2298B33700613E7A /* eyebrows.png in Resources */ = {isa = PBXBuildFile; fileRef = 64DC24CA2298B33700613E7A /* eyebrows.png */; };
 		64DC24CD2298B4C800613E7A /* mouth.png in Resources */ = {isa = PBXBuildFile; fileRef = 64DC24CC2298B4C800613E7A /* mouth.png */; };
+		64DC24D0229BE2D800613E7A /* eyebrowsl.png in Resources */ = {isa = PBXBuildFile; fileRef = 64DC24CE229BE2D800613E7A /* eyebrowsl.png */; };
+		64DC24D1229BE2D800613E7A /* eyebrowsr.png in Resources */ = {isa = PBXBuildFile; fileRef = 64DC24CF229BE2D800613E7A /* eyebrowsr.png */; };
+		64DC24D5229BEBBE00613E7A /* crazy-mouth.png in Resources */ = {isa = PBXBuildFile; fileRef = 64DC24D4229BEBBE00613E7A /* crazy-mouth.png */; };
 		64F48EB81FC7A8F7000ABC8B /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 64F48EB61FC7A8F7000ABC8B /* spark.png */; };
 		64F48EB91FC7A8F7000ABC8B /* Fire.scnp in Resources */ = {isa = PBXBuildFile; fileRef = 64F48EB71FC7A8F7000ABC8B /* Fire.scnp */; };
 /* End PBXBuildFile section */
@@ -42,8 +44,10 @@
 		646FD81B1FC776910026178C /* FaseShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaseShapes.swift; sourceTree = "<group>"; };
 		64DC24C22298AF1600613E7A /* eyel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eyel.png; sourceTree = "<group>"; };
 		64DC24C32298AF1600613E7A /* eyer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eyer.png; sourceTree = "<group>"; };
-		64DC24CA2298B33700613E7A /* eyebrows.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eyebrows.png; sourceTree = "<group>"; };
 		64DC24CC2298B4C800613E7A /* mouth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mouth.png; sourceTree = "<group>"; };
+		64DC24CE229BE2D800613E7A /* eyebrowsl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eyebrowsl.png; sourceTree = "<group>"; };
+		64DC24CF229BE2D800613E7A /* eyebrowsr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eyebrowsr.png; sourceTree = "<group>"; };
+		64DC24D4229BEBBE00613E7A /* crazy-mouth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "crazy-mouth.png"; sourceTree = "<group>"; };
 		64F48EB61FC7A8F7000ABC8B /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		64F48EB71FC7A8F7000ABC8B /* Fire.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = Fire.scnp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,8 +102,10 @@
 		64F48EB51FC7A8C1000ABC8B /* Particles */ = {
 			isa = PBXGroup;
 			children = (
+				64DC24D4229BEBBE00613E7A /* crazy-mouth.png */,
 				64F48EB61FC7A8F7000ABC8B /* spark.png */,
-				64DC24CA2298B33700613E7A /* eyebrows.png */,
+				64DC24CE229BE2D800613E7A /* eyebrowsl.png */,
+				64DC24CF229BE2D800613E7A /* eyebrowsr.png */,
 				64DC24CC2298B4C800613E7A /* mouth.png */,
 				64DC24C22298AF1600613E7A /* eyel.png */,
 				64DC24C32298AF1600613E7A /* eyer.png */,
@@ -171,11 +177,13 @@
 				64DC24C42298AF1600613E7A /* eyel.png in Resources */,
 				64F48EB81FC7A8F7000ABC8B /* spark.png in Resources */,
 				64F48EB91FC7A8F7000ABC8B /* Fire.scnp in Resources */,
-				64DC24CB2298B33700613E7A /* eyebrows.png in Resources */,
 				64DC24CD2298B4C800613E7A /* mouth.png in Resources */,
 				646FD7FE1FC748220026178C /* LaunchScreen.storyboard in Resources */,
 				646FD7FB1FC748220026178C /* Assets.xcassets in Resources */,
+				64DC24D0229BE2D800613E7A /* eyebrowsl.png in Resources */,
 				646FD7F91FC748220026178C /* Main.storyboard in Resources */,
+				64DC24D1229BE2D800613E7A /* eyebrowsr.png in Resources */,
+				64DC24D5229BEBBE00613E7A /* crazy-mouth.png in Resources */,
 				646FD81A1FC75A4C0026178C /* blendShape.scnassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

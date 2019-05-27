@@ -81,11 +81,11 @@ class BlendShapeNode: SCNReferenceNode, VirtualSCNReferenceNode {
                 else { return }
             //leftEarring.scale.z = 1 - eyeBlinkLeft
             
-            let eyebrowRightHeight = eyebrowRight.boundingBox.max.x - eyebrowRight.boundingBox.min.x
-            eyebrowRight.position.y = originalEyebrowRightPosition + (eyebrowRightHeight * browRight)
+            let eyebrowRightHeight = eyebrowRight.boundingBox.max.y - eyebrowRight.boundingBox.min.y
+            eyebrowRight.position.y = originalEyebrowRightPosition + (eyebrowRightHeight / 2 * (browRight))
             
-            let eyebrowLeftHeight = eyebrowLeft.boundingBox.max.x - eyebrowLeft.boundingBox.min.x
-            eyebrowLeft.position.y = originalEyebrowLeftPosition + (eyebrowLeftHeight * browLeft)
+            let eyebrowLeftHeight = eyebrowLeft.boundingBox.max.y - eyebrowLeft.boundingBox.min.y
+            eyebrowLeft.position.y = originalEyebrowLeftPosition + (eyebrowLeftHeight / 2 * (browLeft))
             
             eyeLeft.scale.y = 1 - eyeBlinkLeft
             eyeRight.scale.y = 1 - eyeBlinkRight
@@ -106,7 +106,7 @@ class BlendShapeNode: SCNReferenceNode, VirtualSCNReferenceNode {
                 eyeLeftPupil.position.x = originalEyeLeftPupilPosition + (eyeLeftPupilWidth * eyeLookOutLeft * 2)
             }
             
-            mouth.scale.z = 0.40 + jawOpen
+            mouth.scale.y = 0.40 + jawOpen
             
             mouth.scale.x = 0.7 - mouthClose + (max(mouthSmileLeft, mouthSmileRight)/2)
             

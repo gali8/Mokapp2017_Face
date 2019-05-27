@@ -29,15 +29,15 @@
                                 <rect key="frame" x="30" y="718" width="315" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjs-yZ-Y53">
-                                        <rect key="frame" x="0.0" y="0.0" width="56.666666666666664" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="72.666666666666671" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" image="face1"/>
+                                        <state key="normal" image="face1b"/>
                                         <connections>
                                             <action selector="onMask:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z3D-e3-wrd"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GAJ-Dl-W5f">
-                                        <rect key="frame" x="64.666666666666671" y="0.0" width="56.666666666666671" height="40"/>
+                                        <rect key="frame" x="80.666666666666671" y="0.0" width="73.000000000000014" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" image="face1"/>
                                         <connections>
@@ -45,7 +45,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bk-Oh-hdY">
-                                        <rect key="frame" x="129.33333333333334" y="0.0" width="56.333333333333343" height="40"/>
+                                        <rect key="frame" x="161.66666666666666" y="0.0" width="72.666666666666657" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" image="face2"/>
                                         <connections>
@@ -53,7 +53,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7o-IW-TEp">
-                                        <rect key="frame" x="193.66666666666666" y="0.0" width="56.666666666666657" height="40"/>
+                                        <rect key="frame" x="242.33333333333329" y="0.0" width="72.666666666666657" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" image="face3"/>
                                         <connections>
@@ -76,6 +76,11 @@
                                     <constraint firstItem="vhn-c5-89c" firstAttribute="width" secondItem="fjs-yZ-Y53" secondAttribute="width" id="b4v-PO-3wA"/>
                                     <constraint firstItem="D7o-IW-TEp" firstAttribute="width" secondItem="fjs-yZ-Y53" secondAttribute="width" id="zCL-hH-1d6"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="vhn-c5-89c"/>
+                                    </mask>
+                                </variation>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -100,6 +105,7 @@
     </scenes>
     <resources>
         <image name="face1" width="299" height="168"/>
+        <image name="face1b" width="299" height="168"/>
         <image name="face2" width="299" height="168"/>
         <image name="face3" width="299" height="168"/>
         <image name="face4" width="299" height="168"/>
